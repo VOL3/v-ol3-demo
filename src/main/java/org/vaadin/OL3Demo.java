@@ -34,7 +34,7 @@ public class OL3Demo extends UI
 {
 
     @WebServlet(value = "/*", asyncSupported = true, displayName = "Open layers 3 demo")
-    @VaadinServletConfiguration(productionMode = false, ui = OL3Demo.class, widgetset = "org.vaadin.AppWidgetSet")
+    @VaadinServletConfiguration(productionMode = true, ui = OL3Demo.class, widgetset = "org.vaadin.AppWidgetSet")
     public static class Servlet extends VaadinServlet {
     }
 
