@@ -1,6 +1,7 @@
 package org.vaadin;
 
 import com.vaadin.annotations.Theme;
+import com.vaadin.annotations.Title;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.data.Property;
 import com.vaadin.server.VaadinRequest;
@@ -8,6 +9,7 @@ import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 import org.vaadin.addon.vol3.OLMap;
 import org.vaadin.addon.vol3.OLView;
+import org.vaadin.addon.vol3.OLViewOptions;
 import org.vaadin.addon.vol3.client.OLCoordinate;
 import org.vaadin.addon.vol3.client.Projections;
 import org.vaadin.addon.vol3.client.control.OLMousePositionControl;
@@ -25,7 +27,7 @@ import org.vaadin.addon.vol3.source.OLSource;
 import org.vaadin.addon.vol3.source.OLVectorSource;
 
 import javax.servlet.annotation.WebServlet;
-
+@Title("OpenLayers 3 demo")
 @Theme("mytheme")
 @SuppressWarnings("serial")
 public class OL3Demo extends UI
@@ -68,7 +70,8 @@ public class OL3Demo extends UI
     }
 
     private OLView createView(){
-        OLView view=new OLView();
+        OLViewOptions options=new OLViewOptions();
+        OLView view=new OLView(options);
         view.setZoom(1);
         view.setCenter(0,0);
         return view;
