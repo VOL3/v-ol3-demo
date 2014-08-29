@@ -2,3 +2,4 @@ target
 v-ol3-demo.iml
 .idea
 src/main/webapp/VAADIN/widgetsets/
+deploy.sh
