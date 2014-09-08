@@ -140,11 +140,14 @@ public class OL3Demo extends UI
 
     private void toggleInteractionMode(String mode) {
         clearInteractions();
-        switch(mode){
-            case "select mode" : map.addInteraction(new OLSelectInteraction());break;
-            case "edit mode" : map.addInteraction(new OLModifyInteraction(vectorLayer));break;
-            case "draw mode" : map.addInteraction(new OLDrawInteraction(vectorLayer, OLDrawInteractionOptions.DrawingType.LINESTRING));break;
-            default: Notification.show("Unknown interaction mode : "+mode);
+        if(mode.equals("select mode")){
+            map.addInteraction(new OLSelectInteraction());
+        } else if(mode.equals("edit mode")){
+            map.addInteraction(new OLModifyInteraction(vectorLayer));
+        } else if(mode.equals("draw mode")){
+            map.addInteraction(new OLDrawInteraction(vectorLayer, OLDrawInteractionOptions.DrawingType.LINESTRING));
+        } else{
+            Notification.show("Unknown interaction mode : "+mode);
         }
     }
 

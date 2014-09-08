@@ -92,7 +92,7 @@
         <dependency>
             <groupId>org.vaadin.addon</groupId>
             <artifactId>v-ol3</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>0.1.1</version>
         </dependency>
 	</dependencies>
 
@@ -102,8 +102,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.6</source>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 			<!-- As we are doing "inplace" GWT compilation, ensure the widgetset -->
