@@ -92,7 +92,7 @@
         <dependency>
             <groupId>org.vaadin.addon</groupId>
             <artifactId>v-ol3</artifactId>
-            <version>0.1.1</version>
+            <version>0.1.2</version>
         </dependency>
 	</dependencies>
 
